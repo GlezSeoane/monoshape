@@ -4,7 +4,7 @@
 """monoshape package
 
 This program takes an image that has well differentiated light and dark
-tones and extracts its monochromatic shape in the desired color with a
+tones and extracts its monochromatic shape in the desired colour with a
 transparent background.
 """
 

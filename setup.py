@@ -37,7 +37,7 @@ setup(
                 'image.',
     long_description='This program takes an image that has well '
                      'differentiated light and dark tones and extracts its '
-                     'monochromatic shape in the desired color with a '
+                     'monochromatic shape in the desired colour with a '
                      'transparent background.',
     classifiers=[
         'License :: OSI Approved :: MIT License',

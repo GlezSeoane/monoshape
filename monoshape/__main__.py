@@ -4,7 +4,7 @@
 """monoshape main
 
 This program takes an image that has well differentiated light and dark
-tones and extracts its monochromatic shape in the desired color with a 
+tones and extracts its monochromatic shape in the desired colour with a
 transparent background.
 
 This is the main Python file.
@@ -83,7 +83,7 @@ def extract_shape(path: str,
     Processes an input image (as path) to extract its associated shape.
     Per omission, the shape is drawn black, but using the white_shape
     flag can be drawn white and using the rgb_shape and its associated
-    values can be drawn on every desired color.
+    values can be drawn on every desired colour.
 
     Warning: the input image must to be a PNG image.
 
@@ -94,7 +94,7 @@ def extract_shape(path: str,
     :type black_background: bool
     :param white_shape: Flag to use a white shape
     :type white_shape: bool
-    :param rgb_shape: Flag to use a custom RGB color to the
+    :param rgb_shape: Flag to use a custom RGB colour to the
         output shape
     :type rgb_shape: bool
     :param red: Using an RGB input, the red value
@@ -119,7 +119,7 @@ def extract_shape(path: str,
                           and green is not None
                           and blue is not None):
         raise ValueError("Bad argument composition! Using RGB mode is "
-                         "mandatory specify the color values.")
+                         "mandatory specify the colour values.")
 
     # Check file PNG typing
     try:
@@ -130,7 +130,7 @@ def extract_shape(path: str,
 
     img = Image.open(path)
 
-    # Invert the image color if the flag is passed
+    # Invert the image colour if the flag is passed
     if black_background:
         img = img.convert('RGB')
         img = ImageOps.invert(img)
