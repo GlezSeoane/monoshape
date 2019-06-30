@@ -1,0 +1,30 @@
+name: monoshape
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2019.5.15
+  - certifi=2019.6.16
+  - freetype=2.9.1
+  - jpeg=9b
+  - libcxx=4.0.1
+  - libcxxabi=4.0.1
+  - libedit=3.1.20181209
+  - libffi=3.2.1
+  - libpng=1.6.37
+  - libtiff=4.0.10
+  - ncurses=6.1
+  - olefile=0.46
+  - openssl=1.1.1c
+  - pillow=6.0.0
+  - pip=19.1.1
+  - python=3.7.3
+  - readline=7.0
+  - setuptools=41.0.1
+  - sqlite=3.28.0
+  - tk=8.6.8
+  - wheel=0.33.4
+  - xz=5.2.4
+  - zlib=1.2.11
+  - zstd=1.3.7
+  - pip:
+    - filetype==1.0.5
