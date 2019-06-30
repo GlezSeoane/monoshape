@@ -12,7 +12,7 @@ __license__ = 'LICENSE'
 __version__ = '1.0'
 __maintainer__ = 'Borja González Seoane'
 __email__ = 'dev@glezseoane.com'
-__status__ = 'Development'
+__status__ = 'Production'
 
 
 setup(
