@@ -44,7 +44,7 @@ def handle_arguments(argv: List) -> Tuple:
     :rtype: Tuple
     """
     # Assert composition integrity
-    if not (len(argv) >= 3 or len(argv) <= 8):
+    if len(argv) < 3 or len(argv) > 8:
         raise IOError("Bad command composition! Please, read the manual.")
 
     # The input path is always the first argument
