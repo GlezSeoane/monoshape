@@ -167,10 +167,14 @@ def extract_shape(path: str,
 # =============================================
 # =                    MAIN                   =
 # =============================================
-if __name__ == "__main__":
+def main():
     inpath, outpath, black_background, white_shape, rgb_shape, red, \
         green, blue = handle_arguments(sys.argv)
 
     shape = extract_shape(inpath, black_background, white_shape,
                           rgb_shape, red, green, blue)
     shape.save(outpath)
+
+
+if __name__ == "__main__":
+    main()
