@@ -33,8 +33,7 @@ setup(
     license='LICENSE',
     author='Borja González Seoane',
     author_email='dev@glezseoane.com',
-    description='Extracts a monochromatic shape in the desired color from an '
-                'image.',
+    description='Extracts monochromatic shapes.',
     long_description='This program takes an image that has well '
                      'differentiated light and dark tones and extracts its '
                      'monochromatic shape in the desired colour with a '
