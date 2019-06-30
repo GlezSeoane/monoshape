@@ -10,6 +10,7 @@ transparent background.
 This is the main Python file.
 """
 
+import os
 import sys
 from typing import Tuple, List
 
@@ -43,11 +44,21 @@ def handle_arguments(argv: List) -> Tuple:
     :rtype: Tuple
     """
     # Assert composition integrity
-    if not (len(argv) >= 2 or len(argv) <= 7):
+    if not (len(argv) >= 3 or len(argv) <= 8):
         raise IOError("Bad command composition! Please, read the manual.")
 
-    # The path is always the first argument
-    path = argv[1]
+    # The input path is always the first argument
+    inpath = argv[1]
+    if not os.path.isfile(inpath):
+        raise FileNotFoundError
+
+    # The output path is always the second argument
+    outpath = argv[2]
+    if not outpath.endswith('.png'):
+        raise ValueError("The output file has to be a PNG file and has to "
+                         "end with the .png extension.")
+    elif os.path.isfile(outpath):
+        raise FileExistsError
 
     black_background = '-bb' in argv or '--black_background' in argv
 
@@ -63,7 +74,7 @@ def handle_arguments(argv: List) -> Tuple:
         rgb_shape = False
         red = green = blue = None
 
-    return path, black_background, white_shape, rgb_shape, red, \
+    return inpath, outpath, black_background, white_shape, rgb_shape, red, \
         green, blue
 
 
@@ -158,10 +169,9 @@ def extract_shape(path: str,
 # =                    MAIN                   =
 # =============================================
 if __name__ == "__main__":
-    path, black_background, white_shape, rgb_shape, red, \
+    inpath, outpath, black_background, white_shape, rgb_shape, red, \
         green, blue = handle_arguments(sys.argv)
 
-    shape = extract_shape(path, black_background, white_shape,
+    shape = extract_shape(inpath, black_background, white_shape,
                           rgb_shape, red, green, blue)
-    # Save into a different file
-    shape.save(path.replace('.png', '_trace.png'))
+    shape.save(outpath)
