@@ -122,10 +122,9 @@ def extract_shape(path: str,
     # Check arguments integrity
     if path is None:
         raise ValueError("Bad argument composition! The path is mandatory.")
-    if not (black_background ^ white_shape ^ rgb_shape)\
-            and (black_background or white_shape or rgb_shape):
-        raise ValueError("Bad argument composition! Only a flag can be set "
-                         "to True.")
+    if white_shape and rgb_shape:
+        raise ValueError("Bad argument composition! Only a flag between "
+                         "white_shape and rgb_shape can be set to True.")
     if rgb_shape and not (red is not None
                           and green is not None
                           and blue is not None):
