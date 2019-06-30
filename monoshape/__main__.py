@@ -14,6 +14,7 @@ import sys
 from typing import Tuple, List
 
 import filetype
+# noinspection PyPackageRequirements
 from PIL import Image, ImageOps, PngImagePlugin
 
 __author__ = 'Borja González Seoane'
@@ -48,15 +49,9 @@ def handle_arguments(argv: List) -> Tuple:
     # The path is always the first argument
     path = argv[1]
 
-    if '-bb' in argv or '--black_background' in argv:
-        black_background = True
-    else:
-        black_background = False
+    black_background = '-bb' in argv or '--black_background' in argv
 
-    if '-ws' in argv or '--white_shape' in argv:
-        white_shape = True
-    else:
-        white_shape = False
+    white_shape = '-ws' in argv or '--white_shape' in argv
 
     if '-rgb' in argv:
         rgb_shape = True
@@ -90,7 +85,9 @@ def extract_shape(path: str,
     flag can be drawn white and using the rgb_shape and its associated
     values can be drawn on every desired color.
 
-    :param path: Path to the original image
+    Warning: the input image must to be a PNG image.
+
+    :param path: Path to the original PNG image
     :type path: str
     :param black_background: Flag to consider an inverse image with a black
         background in the image processing
