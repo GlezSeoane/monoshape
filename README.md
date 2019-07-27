@@ -9,7 +9,13 @@ This sofware can be used as final TUI app or as Python library.
 
 ## To set up
 
-You can use PyPI to install this program:
+You can use Homebrew to install this program via my tap repository:
+
+```sh
+brew install glezseoane/homebrew-tap/monoshape
+```
+
+You also can use PyPI to install this program:
 
 ```sh
 pip install monoshape
