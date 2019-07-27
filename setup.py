@@ -9,7 +9,7 @@ __author__ = 'Borja González Seoane'
 __copyright__ = 'Copyright 2019, Borja González Seoane'
 __credits__ = 'Borja González Seoane'
 __license__ = 'LICENSE'
-__version__ = '1.0'
+__version__ = '1.1'
 __maintainer__ = 'Borja González Seoane'
 __email__ = 'dev@glezseoane.com'
 __status__ = 'Production'
@@ -17,7 +17,7 @@ __status__ = 'Production'
 
 setup(
     name='monoshape',
-    version='1.0',
+    version='1.1',
     packages=['monoshape'],
     entry_points={
         'console_scripts': [
@@ -25,7 +25,7 @@ setup(
         ],
     },
     python_requires='>=3.6',
-    install_requires=['filetype==1.0.5', 'pillow==6.0.0'],
+    install_requires=['filetype==1.0.5', 'pillow==6.1'],
     data_files=[('share/man/man1', ['manpages/monoshape.1']),
                 ("", ["LICENSE"])],
     url='https://github.com/GlezSeoane/monoshape',
