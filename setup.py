@@ -9,15 +9,15 @@ __author__ = 'Borja González Seoane'
 __copyright__ = 'Copyright 2019, Borja González Seoane'
 __credits__ = 'Borja González Seoane'
 __license__ = 'LICENSE'
-__version__ = '1.1'
+__version__ = '1.2'
 __maintainer__ = 'Borja González Seoane'
-__email__ = 'dev@glezseoane.com'
+__email__ = 'garaje@glezseoane.es'
 __status__ = 'Production'
 
 
 setup(
     name='monoshape',
-    version='1.1',
+    version='1.2',
     packages=['monoshape'],
     entry_points={
         'console_scripts': [
@@ -25,14 +25,14 @@ setup(
         ],
     },
     python_requires='>=3.6',
-    install_requires=['filetype==1.0.5', 'pillow==6.1'],
+    install_requires=['filetype==1.0.5', 'pillow==6.2.0'],
     data_files=[('share/man/man1', ['manpages/monoshape.1']),
                 ("", ["LICENSE"])],
-    url='https://github.com/GlezSeoane/monoshape',
-    download_url='https://github.com/GlezSeoane/monoshape/archive/v1.0.tar.gz',
+    url='https://github.com/glezseoane/monoshape',
+    download_url='https://github.com/glezseoane/monoshape/archive/v1.2.tar.gz',
     license='LICENSE',
     author='Borja González Seoane',
-    author_email='dev@glezseoane.com',
+    author_email='garaje@glezseoane.es',
     description='Extracts monochromatic shapes.',
     long_description='This program takes an image that has well '
                      'differentiated light and dark tones and extracts its '
