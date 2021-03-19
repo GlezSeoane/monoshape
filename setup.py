@@ -25,7 +25,7 @@ setup(
         ],
     },
     python_requires='>=3.6',
-    install_requires=['filetype==1.0.5', 'pillow==6.2.0'],
+    install_requires=['filetype==1.0.5', 'pillow==8.1.1'],
     data_files=[('share/man/man1', ['manpages/monoshape.1']),
                 ("", ["LICENSE"])],
     url='https://github.com/glezseoane/monoshape',
